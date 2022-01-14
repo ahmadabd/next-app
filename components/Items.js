@@ -5,9 +5,9 @@ const Items = ({articles}) => {
     return (
         <>
         {articles.map(article => (
-            <ArticleList article={article}>
+            <ArticleList key={article.id} article={article}>
               <div>
-                <a key={article.id}>{article.title}</a>
+                <a>{article.title}</a>
               </div>
             </ArticleList>
           ))}
